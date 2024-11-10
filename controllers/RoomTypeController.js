@@ -15,14 +15,18 @@ class RoomTypeController {
                 fasilitas
             })
             if (images && Array.isArray(images)) {
+                const imageId = await Images.count()
                 await Promise.all(
-                    images.map((el) =>
+                    images.map((el, i) => {
+                        let id = imageId + (i + 1)
+                        id = `IMG${id.toString().padStart(3, '0')}`
                         Images.create({
+                            id,
                             room_type_id: data.id,
                             url: el.url,
                             objectKey: el.objectKey
                         })
-                    )
+                    })
                 );
             }
             data = await roomType.findOne({
@@ -128,14 +132,18 @@ class RoomTypeController {
                 })
             }
             if (images && Array.isArray(images)) {
+                const imageId = await Images.count()
                 await Promise.all(
-                    images.map((el) =>
+                    images.map((el, i) => {
+                        let id = imageId + (i + 1)
+                        id = `IMG${id.toString().padStart(3, '0')}`
                         Images.create({
-                            room_type_id: id,
+                            id,
+                            room_type_id: data.id,
                             url: el.url,
                             objectKey: el.objectKey
                         })
-                    )
+                    })
                 );
             }
             const data = await roomType.findOne({

@@ -36,16 +36,6 @@ const Images = db.define('images', {
 }, {
   timestamps: true,
   freezeTableName: true,
-  hooks: {
-    beforeCreate: async (image) => {
-      const lastData = await Images.findAll({
-        order: [['createdAt', 'DESC']]
-      })
-
-      const id = lastData.length == 0 ? 1 : lastData.length + 1
-      image.id = `IMG${id.toString().padStart(3, '0')}`
-    }
-  }
 })
 
 // Set the foreign key relationship between Images and RoomType
