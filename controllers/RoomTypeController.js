@@ -37,6 +37,7 @@ class RoomTypeController {
             })
             return callback.send(null, callback.success(data), res)
         } catch (error) {
+            console.log(error)
             return callback.send(callback.general_error(error), null, res)
         }
     }
@@ -139,7 +140,7 @@ class RoomTypeController {
                         id = `IMG${id.toString().padStart(3, '0')}`
                         Images.create({
                             id,
-                            room_type_id: data.id,
+                            room_type_id: found.id,
                             url: el.url,
                             objectKey: el.objectKey
                         })
@@ -154,6 +155,7 @@ class RoomTypeController {
             })
             return callback.send(null, callback.success(data), res)
         } catch (error) {
+            console.log(error)
             return callback.send(callback.general_error(error), null, res)
         }
     }
