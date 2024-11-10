@@ -1,6 +1,6 @@
 const Admin = require('../models/Admin')
 const AuthHelper = require('../helpers/auth')
-const callback = require('../helpers/Callback')
+const callback = require('../helpers/helper_callback')
 const RoomController = require('./RoomController')
 const Room = require('../models/Room')
 const Reservation = require('../models/Reservation')

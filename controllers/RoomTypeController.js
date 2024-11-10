@@ -1,4 +1,4 @@
-const callback = require('../helpers/Callback')
+const callback = require('../helpers/helper_callback')
 const Images = require('../models/Images')
 const roomType = require('../models/RoomType')
 const r2Bucket = require("../helpers/storage");

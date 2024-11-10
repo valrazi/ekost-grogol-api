@@ -24,7 +24,7 @@ app.use(bodyParser.json({ limit: '20mb', verify: rawBodySaver }))
 app.use(bodyParser.urlencoded({ verify: rawBodySaver, extended: true }))
 var httpContext = require('express-http-context');
 const CommonController = require('./controllers/CommonController')
-const callback = require('./helpers/Callback')
+const callback = require('./helpers/helper_callback')
 const PublicController = require('./controllers/PublicController')
 const ReservationController = require('./controllers/ReservationController')
 app.use(httpContext.middleware);

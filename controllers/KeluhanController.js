@@ -1,4 +1,4 @@
-const callback = require("../helpers/Callback")
+const callback = require("../helpers/helper_callback")
 const Booking = require("../models/Booking")
 const Keluhan = require("../models/Keluhan")
 const Room = require("../models/Room")

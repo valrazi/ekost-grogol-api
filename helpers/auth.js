@@ -1,7 +1,7 @@
 require('dotenv').config()
 const bcrypt = require("bcrypt");
 const jwt = require("jwt-simple");
-const callback = require('./Callback');
+const callback = require('./helper_callback');
 const User = require('../models/User');
 const Admin = require('../models/Admin');
 const srt = process.env.JWT_SECRET;

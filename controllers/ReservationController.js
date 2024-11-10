@@ -1,4 +1,4 @@
-const callback = require("../helpers/Callback")
+const callback = require("../helpers/helper_callback")
 const Reservation = require("../models/Reservation")
 
 class ReservationController {

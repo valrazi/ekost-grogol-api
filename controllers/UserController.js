@@ -1,6 +1,6 @@
 const { Op } = require("sequelize")
 const AuthHelper = require("../helpers/auth")
-const callback = require("../helpers/Callback")
+const callback = require("../helpers/helper_callback")
 const User = require("../models/User")
 const Booking = require("../models/Booking")
 const Room = require("../models/Room")

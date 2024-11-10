@@ -1,4 +1,4 @@
-const callback = require("../helpers/Callback");
+const callback = require("../helpers/helper_callback");
 const r2Bucket = require("../helpers/storage");
 const fs = require('fs');
 require('dotenv').config()

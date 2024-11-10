@@ -1,5 +1,5 @@
 const db = require("../db")
-const callback = require("../helpers/Callback")
+const callback = require("../helpers/helper_callback")
 const Booking = require("../models/Booking")
 const Room = require("../models/Room")
 const RoomType = require("../models/RoomType")
