@@ -39,7 +39,7 @@ class BookingController {
                 totalPrice = !diff ? (roomType.harga / 4) * 1 : (roomType.harga / 4) * diff
             } else {
                 const diffMonth = Math.ceil(end.diff(start, 'months'))
-                totalPrice = roomType.harga = diffMonth
+                totalPrice = roomType.harga * diffMonth
             }
 
 
